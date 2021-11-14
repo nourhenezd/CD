@@ -1,0 +1,7 @@
+---
+# tasks file for build
+                 - name : build app
+                   shell :
+                      chdir: "{{playbook_dir}}/.."
+                      cmd : ng build --prod
+
