@@ -1,0 +1,14 @@
+---
+# tasks file for ansible/roles/docker-registry
+- name: Log into DockerHub
+  docker_login:
+    username: nourhene123
+    password: 80e9f384-5746-44de-9e14-4ec83540760d
+              
+- name: Tag and push to docker hub
+  docker_image:
+    source: local
+    name: devops:latest
+    repository: nourhene123/myapp
+    tag: end
+    push: yes
