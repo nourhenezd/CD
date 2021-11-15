@@ -20,6 +20,7 @@ pipeline {
                }
 
         }
+        
         stage ('Dokcer build') {
                steps{
                  script{
@@ -28,7 +29,6 @@ pipeline {
                }
 
         }
-        
         stage('dockerHub') {
              steps{
                 script{
@@ -43,8 +43,4 @@ post {
             cleanWs()
         }
     }
-} 
-        
-
-
-
+}
